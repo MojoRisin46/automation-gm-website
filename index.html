@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automatisierungslösungen von GM – Automatisierungstechnik</title>
+  <meta name="theme-color" content="#326b60">
+  <meta name="description" content="Schlanke Automatisierungslösungen für Geschäftsprozesse mit Fokus auf Effizienz, Struktur und Datenschutz.">
+
+  <style>
+    :root{
+      --color-primary:#326b60;
+      --color-accent:#cc632f;
+      --color-dark:#2e2e2e;
+      --color-dark2:#3a3a3a;
+      --color-bg:#f3e3b9;
+      --color-surface:#ffffff;
+      --color-text:#2e2e2e;
+      --color-muted:rgba(46,46,46,.78);
+      --color-soft:rgba(50,107,96,.10);
+      --radius:18px;
+      --shadow:0 10px 25px rgba(0,0,0,.08);
+      --max-width:1100px;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:var(--color-bg);
+      color:var(--color-text);
+      line-height:1.6;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    section{
+      max-width:var(--max-width);
+      margin:auto;
+      padding:72px 24px;
+    }
+
+    .section-head{
+      margin-bottom:26px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.55);
+      color:var(--color-primary);
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.02em;
+      margin-bottom:12px;
+    }
+
+    .section-title{
+      font-size:clamp(1.6rem, 2.5vw, 2.2rem);
+      line-height:1.15;
+      margin-bottom:10px;
+      color:var(--color-dark);
+    }
+
+    .section-lead{
+      max-width:760px;
+      color:var(--color-muted);
+      font-size:16px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 22px;
+      border:0;
+      border-radius:12px;
+      background:var(--color-primary);
+      color:white;
+      font:inherit;
+      font-weight:700;
+      cursor:pointer;
+      transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+      box-shadow:0 8px 18px rgba(50,107,96,.18);
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 12px 24px rgba(50,107,96,.22);
+      background:#2c5b53;
+    }
+
+    .hero{
+      padding:28px 24px 12px;
+    }
+
+    .hero-panel{
+      width:min(100%, var(--max-width));
+      margin:auto;
+      background:linear-gradient(135deg,var(--color-primary),var(--color-accent));
+      color:white;
+      border-radius:24px;
+      padding:34px 28px 28px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-top{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:18px;
+      flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+
+    .logo{
+      width:min(320px, 86vw);
+      height:auto;
+      border-radius:0;
+      transition:transform .2s ease, filter .2s ease;
+      filter:drop-shadow(0 10px 18px rgba(0,0,0,.12));
+    }
+
+    .logo:hover{
+      transform:scale(1.02);
+      filter:drop-shadow(0 14px 22px rgba(0,0,0,.16));
+    }
+
+    .hero-copy{
+      max-width:720px;
+      text-align:center;
+    }
+
+    .hero h1{
+      font-size:clamp(2rem, 4vw, 3.25rem);
+      line-height:1.06;
+      letter-spacing:-.02em;
+      margin-bottom:14px;
+    }
+
+    .hero-copy p{
+      font-size:18px;
+      line-height:1.6;
+      opacity:.96;
+      max-width:620px;
+      margin:0 auto 12px;
+    }
+
+    .hero-cta{
+      margin-top:20px;
+    }
+
+    .hero-visual{
+      margin-top:26px;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      background:rgba(255,255,255,.08);
+    }
+
+    .hero-visual img{
+      width:100%;
+      aspect-ratio:16/8.5;
+      object-fit:cover;
+    }
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:var(--color-surface);
+      border-radius:20px;
+      padding:22px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(50,107,96,.08);
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      min-height:100%;
+    }
+
+    .card-note{
+      display:inline-flex;
+      width:fit-content;
+      align-items:center;
+      gap:8px;
+      padding:7px 11px;
+      border-radius:999px;
+      background:var(--color-soft);
+      color:var(--color-primary);
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .card h2{
+      font-size:1.12rem;
+      line-height:1.25;
+      color:var(--color-dark);
+    }
+
+    .card p{
+      font-size:15px;
+      line-height:1.55;
+      color:var(--color-muted);
+    }
+
+    .card-image{
+      margin-top:auto;
+      border-radius:16px;
+      overflow:hidden;
+      background:#f7f7f7;
+    }
+
+    .card-image img{
+      width:100%;
+      aspect-ratio:16/9;
+      object-fit:cover;
+    }
+
+    .process{
+      width:min(100%, calc(var(--max-width) + 48px));
+      margin:0 auto;
+      background:var(--color-dark);
+      color:white;
+      border-radius:24px;
+      padding:64px 24px;
+    }
+
+    .process .section-title,
+    .process .section-lead{
+      color:white;
+    }
+
+    .process .badge{
+      background:rgba(255,255,255,.08);
+      color:#fff;
+    }
+
+    .process-flow{
+      display:grid;
+      grid-template-columns:repeat(4, minmax(0, 1fr));
+      gap:18px;
+      margin-top:26px;
+    }
+
+    .step{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:18px;
+      padding:22px;
+      min-height:235px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    .step-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:38px;
+      height:38px;
+      border-radius:999px;
+      background:var(--color-accent);
+      color:white;
+      font-weight:800;
+      flex:0 0 auto;
+    }
+
+    .step h3{
+      font-size:1.05rem;
+      line-height:1.25;
+    }
+
+    .step p{
+      font-size:14.5px;
+      line-height:1.55;
+      color:rgba(255,255,255,.84);
+    }
+
+    .step-tag{
+      display:inline-flex;
+      width:fit-content;
+      align-items:center;
+      gap:8px;
+      padding:7px 11px;
+      border-radius:999px;
+      background:rgba(255,255,255,.08);
+      color:rgba(255,255,255,.92);
+      font-size:12px;
+      font-weight:700;
+    }
+
+    footer{
+      padding:32px 18px 44px;
+      text-align:center;
+      color:var(--color-muted);
+      font-size:14px;
+    }
+
+    @media (max-width: 1100px){
+      .process-flow{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px){
+      section{
+        padding:56px 18px;
+      }
+
+      .hero{
+        padding:18px 18px 10px;
+      }
+
+      .hero-panel{
+        padding:28px 18px 22px;
+      }
+
+      .hero h1{
+        text-align:center;
+      }
+
+      .hero-copy p{
+        font-size:16px;
+      }
+
+      .process-flow{
+        grid-template-columns:1fr;
+      }
+
+      .step{
+        min-height:auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hero">
+    <div class="hero-panel">
+      <div class="hero-top">
+        <img src="images/logo_no_background.png" alt="GM Automatisierung" class="logo">
+        <div class="hero-copy">
+          <h1>Automatisierung für skalierbare Geschäftsprozesse</h1>
+          <p>Manuelle Prozesse kosten Zeit und verursachen unnötige Fehler. Wir analysieren Ihre Abläufe und entwickeln schlanke Automatisierungen.</p>
+          <p>Klare Strukturen, weniger Handarbeit, messbare Effizienzgewinne.</p>
+          <div class="hero-cta">
+            <button class="btn" onclick="contactAction()">Kostenlose Prozessanalyse anfragen</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img src="images/hero-dashboard.jpg" alt="Automatisierungs-Workflow-Dashboard">
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="section-head">
+      <span class="badge">Leistungsumfang</span>
+      <h2 class="section-title">Was wir systematisch prüfen</h2>
+      <p class="section-lead">Ein schlanker Ablauf, der Ihre Prozesse sichtbar macht, Potenziale priorisiert und am Ende ein klares, nachvollziehbares Ergebnis liefert.</p>
+    </div>
+
+    <div class="feature-grid">
+
+      <article class="card">
+        <span class="card-note">🔍 Analyse</span>
+        <h2>Prozessanalyse</h2>
+        <p>Bestehende Abläufe werden systematisch erfasst und auf Engpässe, Fehlerquellen und Automatisierungspotenziale geprüft.</p>
+        <div class="card-image">
+          <img src="images/process-analysis.jpg" alt="Prozessanalyse">
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="card-note">📌 Bewertung</span>
+        <h2>Bewertung</h2>
+        <p>Sie erhalten eine klare Einschätzung, welche Prozesse sich sinnvoll automatisieren lassen und welchen Nutzen dies bringt.</p>
+        <div class="card-image">
+          <img src="images/workflow-review.jpg" alt="Bewertung von Workflows">
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="card-note">📄 Booklet</span>
+        <h2>Automationsplan</h2>
+        <p>Alle identifizierten Automationen werden strukturiert dokumentiert – inklusive konkreter Umsetzungsansätze.</p>
+        <div class="card-image">
+          <img src="images/automation-booklet.jpg" alt="Automationsplan als PDF">
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="card-note">⚙️ Umsetzung</span>
+        <h2>Umsetzung</h2>
+        <p>Die Umsetzung erfolgt optional und zielgerichtet – basierend auf den zuvor definierten Automationen.</p>
+        <div class="card-image">
+          <img src="images/implementation-team.jpg" alt="Umsetzung von Automatisierungen">
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="card-note">🔒 Datenschutz</span>
+        <h2>Datenschutz</h2>
+        <p>Alle bereitgestellten Daten und Prozessinformationen werden vertraulich behandelt. Keine Weitergabe an Dritte, keine externen Tracker und keine unnötige Datenspeicherung.</p>
+        <div class="card-image">
+          <img src="images/privacy-lock.jpg" alt="Datenschutz und Sicherheit">
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="section-head">
+      <span class="badge">Ablauf</span>
+      <h2 class="section-title">So läuft die Zusammenarbeit ab</h2>
+      <p class="section-lead">Vier klare Schritte. Kein unnötiger Ballast. Erst Verständnis, dann Dokumentation, dann Priorisierung, dann optional die Umsetzung.</p>
+    </div>
+
+    <div class="process-flow">
+      <article class="step">
+        <div class="step-badge">1</div>
+        <span class="step-tag">📊 Analyse</span>
+        <h3>Prozessaufnahme</h3>
+        <p>Gemeinsam erfassen wir die relevanten Abläufe und dokumentieren die aktuelle Ausgangslage.</p>
+      </article>
+
+      <article class="step">
+        <div class="step-badge">2</div>
+        <span class="step-tag">📄 PDF / Booklet</span>
+        <h3>Kostenloses Ergebnisdokument</h3>
+        <p>Sie erhalten ein strukturiertes Booklet oder PDF mit den identifizierten Automationsideen und einer klaren Zusammenfassung.</p>
+      </article>
+
+      <article class="step">
+        <div class="step-badge">3</div>
+        <span class="step-tag">🔒 Datenschutz</span>
+        <h3>Vertrauliche Behandlung</h3>
+        <p>Die Informationen bleiben geschützt. Keine unnötige Speicherung, keine Weitergabe an Dritte und keine externen Tracker.</p>
+      </article>
+
+      <article class="step">
+        <div class="step-badge">4</div>
+        <span class="step-tag">🚀 Umsetzung</span>
+        <h3>Optionale Realisierung</h3>
+        <p>Nur wenn es sinnvoll ist, werden die ausgewählten Automationen technisch umgesetzt und in Ihre Abläufe integriert.</p>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <p>Kontakt: automation-gm@proton.me | Max Wagner</p>
+  </footer>
+
+  <script>
+    function contactAction(){
+      window.location.href = "mailto:EMAIL@DOMAIN.DE?subject=Automatisierungsanalyse";
+    }
+  </script>
+
+</body>
+</html>
