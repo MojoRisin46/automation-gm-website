@@ -20,7 +20,6 @@
       --color-muted:rgba(46,46,46,.76);
       --color-soft:rgba(50,107,96,.10);
       --color-soft-2:rgba(204,99,47,.10);
-      --radius:18px;
       --shadow:0 10px 25px rgba(0,0,0,.08);
       --shadow-strong:0 16px 35px rgba(0,0,0,.14);
       --max-width:1100px;
@@ -390,6 +389,59 @@
       color:#fff;
     }
 
+    .implementation{
+      max-width:var(--max-width);
+      margin:auto;
+      padding:96px 24px 0;
+    }
+
+    .implementation-card{
+      background:var(--color-surface);
+      border-radius:20px;
+      padding:26px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(50,107,96,.08);
+      display:grid;
+      gap:12px;
+    }
+
+    .implementation-card p{
+      color:var(--color-muted);
+      font-size:15px;
+      line-height:1.6;
+      max-width:760px;
+    }
+
+    .security{
+      max-width:var(--max-width);
+      margin:auto;
+      padding:96px 24px 24px;
+    }
+
+    .security-wrap{
+      background:var(--color-surface);
+      border-radius:20px;
+      padding:26px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(50,107,96,.08);
+      display:grid;
+      gap:14px;
+    }
+
+    .security-wrap p{
+      color:var(--color-muted);
+      font-size:15px;
+      line-height:1.6;
+      max-width:760px;
+    }
+
+    .security-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:6px;
+    }
+
     footer{
       padding:32px 18px 44px;
       text-align:center;
@@ -444,6 +496,12 @@
       .process{
         padding:72px 18px;
       }
+
+      .implementation,
+      .security{
+        padding-left:18px;
+        padding-right:18px;
+      }
     }
   </style>
 </head>
@@ -462,13 +520,13 @@
           </p>
 
           <p class="hero-sub">
-            Drei klar getrennte Phasen – vollständig optional und aktuell kostenfrei. Eine Umsetzung erfolgt nur, wenn sie fachlich sinnvoll ist und Sie dies ausdrücklich wünschen.
+            Die Zusammenarbeit erfolgt in drei klar getrennten Phasen – aktuell kostenfrei und unverbindlich. Eine spätere Umsetzung erfolgt nur, wenn sie fachlich sinnvoll ist und Sie sie beauftragen.
           </p>
 
           <div class="hero-meta" aria-label="Kernaussagen">
             <span class="hero-pill">kostenfrei</span>
-            <span class="hero-pill">optional</span>
-            <span class="hero-pill">privacy-focused</span>
+            <span class="hero-pill">unverbindlich</span>
+            <span class="hero-pill">datenschutzorientiert</span>
             <span class="hero-pill">schrittweise</span>
           </div>
 
@@ -490,7 +548,7 @@
       <span class="badge">Leistungsüberblick</span>
       <h2 class="section-title">Was wir systematisch prüfen</h2>
       <p class="section-lead">
-        Der Fokus liegt zuerst auf Struktur, Abläufen und wirtschaftlichem Potenzial. So entsteht ein klarer Überblick, ohne unnötig in sensible Systeme einzugreifen.
+        Der Fokus liegt zuerst auf Struktur, Abläufen und wirtschaftlichem Potenzial. So entsteht ein klarer Überblick über mögliche Optimierungen.
       </p>
     </div>
 
@@ -532,15 +590,6 @@
         </div>
       </article>
 
-      <article class="card">
-        <span class="card-note">Vertrauen</span>
-        <h2>Vertraulichkeit und Datenschutz</h2>
-        <p>Alle Informationen werden vertraulich behandelt. Die Details zu Sicherheitsarchitektur, Zugriff und Schutzmaßnahmen finden Sie auf der separaten Sicherheitsseite.</p>
-        <div class="card-image">
-          <img src="images/megan_rexazin_conde-science-6063326_1920.png" alt="Datenschutz" loading="lazy">
-        </div>
-      </article>
-
     </div>
   </section>
 
@@ -556,19 +605,32 @@
 
       <div class="process-summary">
         <p>
-          Auf dieser Website geben wir bewusst nur einen kompakten Überblick. Die ausführliche Beschreibung der einzelnen Phasen liegt auf einer separaten Seite, damit die Homepage klar, ruhig und übersichtlich bleibt.
+          Auf dieser Website erhalten Sie einen kompakten Überblick über den Ablauf. Die einzelnen Phasen erläutern wir im Detail auf der Unterseite zum Vorgehen.
         </p>
         <p>
-          So sehen Interessenten sofort, wie wir arbeiten, ohne mit zu vielen Details überladen zu werden.
+          So erhalten Sie schnell ein klares Bild unseres Vorgehens.
         </p>
       </div>
 
       <div class="process-link">
-        <a href="vorgehen.html" class="btn">Vorgehen im Detail ansehen</a>
+        <a href="vorgehen.html" class="btn">Alle Phasen im Detail</a>
       </div>
 
       <div class="process-note">
-        <strong>Hinweis:</strong> Alle drei Phasen sind aktuell kostenfrei und freiwillig. Erst wenn Sie anschließend eine Umsetzung beauftragen möchten, entstehen dafür Kosten. Die ausführliche Darstellung des Vorgehens ist auf der separaten Seite hinterlegt.
+        <strong>Hinweis:</strong> Alle drei Phasen sind aktuell kostenfrei und freiwillig. Erst wenn Sie anschließend eine Umsetzung beauftragen möchten, entstehen dafür Kosten.
+      </div>
+    </div>
+  </section>  
+
+  <section class="security">
+    <div class="security-wrap">
+      <span class="badge">Sicherheit</span>
+      <h2 class="section-title" style="margin-bottom:0;">Daten- und Sicherheitsrahmen</h2>
+      <p>
+        Klar definierte Regeln für Zugriff, Datenverwendung und Vertraulichkeit. Das Sicherheitskonzept beschreibt, wie wir mit Informationen, Systemen und Daten im Rahmen der Zusammenarbeit umgehen.
+      </p>
+      <div class="security-actions">
+        <a href="security.html" class="btn">Sicherheitskonzept ansehen</a>
       </div>
     </div>
   </section>
@@ -577,6 +639,8 @@
     <p>Kontakt: automation-gm@proton.me | Max Wagner</p>
     <p style="margin-top:10px;">
       <a href="vorgehen.html">Vorgehen</a>
+      &nbsp;|&nbsp;
+      <a href="security.html">Sicherheit</a>
       &nbsp;|&nbsp;
       <a href="datenschutz.html">Datenschutzerklärung</a>
       &nbsp;|&nbsp;

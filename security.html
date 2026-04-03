@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sicherheits- und Datenrahmen – GM Automatisierung</title>
+
+  <style>
+    :root{
+      --color-primary:#326b60;
+      --color-dark:#25312f;
+      --color-bg:#f5ead0;
+      --color-surface:#ffffff;
+      --color-text:#2e2e2e;
+      --color-muted:rgba(46,46,46,.75);
+      --shadow:0 12px 30px rgba(0,0,0,.10);
+      --max-width:900px;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:var(--color-bg);
+      color:var(--color-text);
+      line-height:1.6;
+    }
+
+    section{
+      max-width:var(--max-width);
+      margin:auto;
+      padding:72px 20px;
+    }
+
+    h1{
+      font-size:2.2rem;
+      margin-bottom:14px;
+      color:var(--color-dark);
+      letter-spacing:-.02em;
+    }
+
+    h2{
+      font-size:1.2rem;
+      margin-bottom:8px;
+      margin-top:24px;
+      color:var(--color-dark);
+    }
+
+    p{
+      margin-bottom:10px;
+      color:var(--color-muted);
+    }
+
+    ul{
+      margin:8px 0 16px 18px;
+    }
+
+    li{
+      margin-bottom:6px;
+      color:var(--color-muted);
+    }
+
+    .box{
+      background:var(--color-surface);
+      border-radius:16px;
+      padding:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .intro{
+      font-size:16px;
+      margin-bottom:20px;
+    }
+
+    .note{
+      margin-top:30px;
+      padding:18px;
+      border-radius:12px;
+      background:rgba(50,107,96,.08);
+      font-size:14px;
+    }
+
+    .back{
+      margin-top:40px;
+    }
+
+    .btn{
+      padding:12px 18px;
+      background:var(--color-primary);
+      color:white;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:600;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<section>
+
+  <h1>Sicherheits- und Datenrahmen</h1>
+
+  <p class="intro">
+    Dieser Rahmen beschreibt transparent, wie im Rahmen von Automatisierungs-Checks mit Informationen, Systemen und Daten umgegangen wird.
+  </p>
+
+  <div class="box">
+
+    <h2>1. Zweck</h2>
+    <ul>
+      <li>Beschreibung des Umgangs mit Informationen, Systemen und Daten im Rahmen der Zusammenarbeit.</li>
+    </ul>
+
+    <h2>2. Geltungsbereich</h2>
+    <ul>
+      <li>Gilt für freiwillige Leistungen im Bereich Prozessanalyse, Automatisierungsprüfung und technische Vorprüfung.</li>
+      <li>Keine Pflicht zur Offenlegung von Daten oder Systemzugriffen ohne ausdrückliche Zustimmung.</li>
+    </ul>
+
+    <h2>3. Drei Phasen</h2>
+    <ul>
+      <li>Phase 1 – Prozessaudit ohne Zugriff auf interne Systeme oder personenbezogene Daten.</li>
+      <li>Phase 2 – Arbeit mit anonymisierten, pseudonymisierten oder synthetischen Daten.</li>
+      <li>Phase 3 – Optionaler technischer Review mit begrenztem Zugriff im vereinbarten Umfang.</li>
+    </ul>
+
+    <h2>4. Datenprinzipien</h2>
+    <ul>
+      <li>Es werden nur notwendige Daten angefragt.</li>
+      <li>Bevorzugt werden Metadaten, Beispiele, Maskierungen oder Exporte ohne personenbezogene Inhalte.</li>
+      <li>Personenbezogene Daten werden vermieden, wenn sie nicht erforderlich sind.</li>
+    </ul>
+
+    <h2>5. Künstliche Intelligenz</h2>
+    <ul>
+      <li>Keine Weitergabe an externe KI-Dienste ohne vorherige Zustimmung.</li>
+      <li>Einsatz nur mit freigegebenen und möglichst anonymisierten Daten.</li>
+      <li>Transparenz über verwendete Tools auf Anfrage.</li>
+    </ul>
+
+    <h2>6. Sicherheit</h2>
+    <ul>
+      <li>Getrennte Projektbereiche pro Kunde.</li>
+      <li>Verschlüsselte Geräte, Speicherung und Übertragung.</li>
+      <li>Zugangsdaten werden nicht dauerhaft gespeichert, soweit vermeidbar.</li>
+      <li>Nutzung von Test-, Staging- oder Leserechten, wenn möglich.</li>
+    </ul>
+
+    <h2>7. Vertraulichkeit</h2>
+    <ul>
+      <li>Alle Informationen werden vertraulich behandelt.</li>
+      <li>Keine Weitergabe an Dritte ohne Zustimmung, außer bei rechtlicher Verpflichtung.</li>
+    </ul>
+
+    <h2>8. Verantwortung des Kunden</h2>
+    <ul>
+      <li>Prüfung der Berechtigung zur Weitergabe von Daten und Zugriffen liegt beim Kunden.</li>
+      <li>Verantwortung für rechtliche Zulässigkeit und Systemsicherheit verbleibt beim Kunden.</li>
+      <li>Backups und Wiederherstellungsmaßnahmen sollten vor technischen Eingriffen vorhanden sein.</li>
+    </ul>
+
+    <h2>9. Haftung</h2>
+    <ul>
+      <li>Leistungen erfolgen nach bestem Wissen im vereinbarten Umfang.</li>
+      <li>Keine Garantie für die Behebung bestehender Systemprobleme oder Drittanbietergrenzen.</li>
+      <li>Haftung ist, soweit zulässig, auf den Auftragswert begrenzt; Folgeschäden ausgeschlossen.</li>
+    </ul>
+
+    <h2>10. Freiwilligkeit und Beendigung</h2>
+    <ul>
+      <li>Alle Prüfungen und Zugriffe erfolgen freiwillig und nur nach Zustimmung.</li>
+      <li>Jeder Schritt kann vor Ausführung gestoppt werden.</li>
+      <li>Daten werden nach Abschluss gelöscht oder zurückgegeben, sofern nichts anderes vereinbart wurde.</li>
+    </ul>
+
+    <h2>11. Kurzfassung</h2>
+    <ul>
+      <li>Datensparsam und transparent.</li>
+      <li>Bevorzugung anonymisierter Daten.</li>
+      <li>Keine unnötigen Zugriffe oder Weitergaben ohne Zustimmung.</li>
+    </ul>
+
+  </div>
+
+  <div class="note">
+    Dieser Rahmen dient der Transparenz und ersetzt keine individuelle rechtliche Prüfung im Einzelfall.
+  </div>
+
+  <div class="back">
+    <a href="index.html" class="btn">Zurück zur Startseite</a>
+  </div>
+
+</section>
+
+</body>
+</html>
