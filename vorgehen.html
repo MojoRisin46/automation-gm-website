@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unser Vorgehen – GM Automatisierung</title>
+
+  <style>
+    :root{
+      --color-primary:#326b60;
+      --color-primary-dark:#264f47;
+      --color-accent:#cc632f;
+      --color-dark:#25312f;
+      --color-bg:#f5ead0;
+      --color-surface:#ffffff;
+      --color-text:#2e2e2e;
+      --color-muted:rgba(46,46,46,.75);
+      --shadow:0 12px 30px rgba(0,0,0,.10);
+      --max-width:900px;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:var(--color-bg);
+      color:var(--color-text);
+      line-height:1.6;
+    }
+
+    section{
+      max-width:var(--max-width);
+      margin:auto;
+      padding:72px 20px;
+    }
+
+    h1{
+      font-size:2.4rem;
+      margin-bottom:14px;
+      letter-spacing:-.02em;
+      color:var(--color-dark);
+    }
+
+    h2{
+      font-size:1.4rem;
+      margin-bottom:10px;
+      color:var(--color-dark);
+      letter-spacing:-.01em;
+    }
+
+    p{
+      margin-bottom:14px;
+      color:var(--color-muted);
+    }
+
+    .lead{
+      font-size:17px;
+      max-width:700px;
+    }
+
+    .phase{
+      background:var(--color-surface);
+      border-radius:18px;
+      padding:26px;
+      margin-top:28px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(50,107,96,.08);
+    }
+
+    .phase-header{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:10px;
+    }
+
+    .phase-number{
+      width:38px;
+      height:38px;
+      border-radius:999px;
+      background:var(--color-accent);
+      color:white;
+      font-weight:700;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .tag{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(50,107,96,.1);
+      color:var(--color-primary);
+      font-size:12px;
+      font-weight:700;
+      margin-bottom:10px;
+    }
+
+    ul{
+      margin:10px 0 16px 18px;
+    }
+
+    li{
+      margin-bottom:6px;
+      color:var(--color-muted);
+    }
+
+    .note{
+      margin-top:30px;
+      padding:18px;
+      border-radius:14px;
+      background:rgba(50,107,96,.08);
+      font-size:14px;
+    }
+
+    .cta{
+      margin-top:40px;
+      text-align:center;
+    }
+
+    .btn{
+      padding:14px 22px;
+      border-radius:10px;
+      background:var(--color-primary);
+      color:white;
+      font-weight:700;
+      text-decoration:none;
+      display:inline-block;
+      box-shadow:0 10px 20px rgba(50,107,96,.18);
+    }
+
+    .btn:hover{
+      background:var(--color-primary-dark);
+    }
+
+  </style>
+</head>
+
+<body>
+
+<section>
+
+  <h1>Unser Vorgehen</h1>
+  <p class="lead">
+    Die Identifikation und Umsetzung von Automatisierungspotenzialen erfolgt strukturiert in drei klar getrennten Phasen. Jede Phase ist optional und dient dazu, Risiken zu minimieren und fundierte Entscheidungen zu ermöglichen.
+  </p>
+
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-number">1</div>
+      <h2>Analyse & Strukturierung</h2>
+    </div>
+
+    <span class="tag">ohne Systemzugriff</span>
+
+    <p>
+      In der ersten Phase werden bestehende Abläufe strukturiert erfasst und auf wiederkehrende Muster, Engpässe und manuelle Arbeitsschritte untersucht.
+    </p>
+
+    <ul>
+      <li>Erfassung zentraler Geschäftsprozesse</li>
+      <li>Identifikation von Wiederholungen und manuellen Tätigkeiten</li>
+      <li>Aufdecken von Schnittstellen zwischen Systemen</li>
+      <li>Erkennen von Fehlerquellen und Verzögerungen</li>
+    </ul>
+
+    <p>
+      Ergebnis ist eine priorisierte Übersicht möglicher Automatisierungen sowie eine erste Einschätzung von Nutzen und Aufwand.
+    </p>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-number">2</div>
+      <h2>Technische Validierung</h2>
+    </div>
+
+    <span class="tag">kontrollierter Zugriff</span>
+
+    <p>
+      Auf Basis der Analyse wird geprüft, wie sich die identifizierten Potenziale technisch umsetzen lassen und welche Voraussetzungen dafür notwendig sind.
+    </p>
+
+    <ul>
+      <li>Analyse bestehender Systeme und Tools</li>
+      <li>Arbeit mit strukturellen oder anonymisierten Daten</li>
+      <li>Definition konkreter Automatisierungslogiken</li>
+      <li>Bewertung von Machbarkeit und Komplexität</li>
+    </ul>
+
+    <p>
+      Ziel ist eine belastbare Entscheidungsgrundlage mit klaren technischen Ansätzen und realistischen Aufwandsschätzungen.
+    </p>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-number">3</div>
+      <h2>Prototyping & Bewertung</h2>
+    </div>
+
+    <span class="tag">sichere Testumgebung</span>
+
+    <p>
+      In der dritten Phase werden ausgewählte Ansätze konkretisiert und in einer kontrollierten Umgebung getestet.
+    </p>
+
+    <ul>
+      <li>Erstellung von Prototypen oder Testautomationen</li>
+      <li>Simulation realer Abläufe</li>
+      <li>Überprüfung von Stabilität und Nutzen</li>
+      <li>Feinjustierung der Prozesse</li>
+    </ul>
+
+    <p>
+      Ergebnis ist eine klare Entscheidungsbasis, ob und welche Automationen sinnvoll umgesetzt werden sollten.
+    </p>
+  </div>
+
+  <div class="note">
+    Alle drei Phasen sind aktuell kostenfrei und unverbindlich. Eine Umsetzung erfolgt ausschließlich, wenn sie fachlich sinnvoll ist und von Ihnen ausdrücklich gewünscht wird.
+  </div>
+
+  <div class="cta">
+    <a href="mailto:automation-gm@proton.me?subject=Anfrage%20Automatisierungsanalyse" class="btn">
+      Unverbindliche Analyse anfragen
+    </a>
+  </div>
+
+</section>
+
+</body>
+</html>
