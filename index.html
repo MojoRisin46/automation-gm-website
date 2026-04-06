@@ -258,7 +258,7 @@
 
     .feature-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns:repeat(3, minmax(0, 1fr));
       gap:26px;
     }
 
@@ -272,6 +272,7 @@
       flex-direction:column;
       gap:14px;
       min-height:100%;
+      position:relative;
     }
 
     .card-note{
@@ -292,6 +293,28 @@
       color:var(--color-accent);
     }
 
+    .free-badge,
+    .paid-badge{
+      position:absolute;
+      top:-10px;
+      right:-10px;
+      color:white;
+      font-size:12px;
+      font-weight:700;
+      padding:6px 10px;
+      border-radius:999px;
+      box-shadow:0 6px 14px rgba(0,0,0,.15);
+      z-index:2;
+    }
+
+    .free-badge{
+      background:var(--color-accent);
+    }
+
+    .paid-badge{
+      background:#444;
+    }
+
     .card h2{
       font-size:1.12rem;
       line-height:1.25;
@@ -305,6 +328,32 @@
       color:var(--color-muted);
     }
 
+    .card-list{
+      list-style:none;
+      display:grid;
+      gap:8px;
+      margin-top:2px;
+    }
+
+    .card-list li{
+      position:relative;
+      padding-left:18px;
+      color:var(--color-muted);
+      font-size:15px;
+      line-height:1.5;
+    }
+
+    .card-list li::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:.68em;
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:var(--color-primary);
+    }
+
     .card-image{
       margin-top:auto;
       border-radius:16px;
@@ -316,6 +365,31 @@
       width:100%;
       aspect-ratio:16/9;
       object-fit:cover;
+    }
+
+    .feature-grid .card:last-child{
+      grid-column:1 / -1;
+      display:grid;
+      grid-template-columns:220px minmax(0, 1fr);
+      gap:20px;
+      align-items:center;
+      padding:18px 22px;
+    }
+
+    .feature-grid .card:last-child .card-image{
+      margin-top:0;
+      height:100%;
+      max-width:220px;
+    }
+
+    .feature-grid .card:last-child .card-image img{
+      aspect-ratio:4/3;
+      height:100%;
+    }
+
+    .feature-grid .card:last-child .card-content{
+      display:grid;
+      gap:12px;
     }
 
     .process{
@@ -458,6 +532,14 @@
       .process{
         padding:72px 24px;
       }
+
+      .feature-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+      }
+
+      .feature-grid .card:last-child{
+        grid-column:1 / -1;
+      }
     }
 
     @media (max-width: 640px){
@@ -502,6 +584,18 @@
         padding-left:18px;
         padding-right:18px;
       }
+
+      .feature-grid{
+        grid-template-columns:1fr;
+      }
+
+      .feature-grid .card:last-child{
+        grid-template-columns:1fr;
+      }
+
+      .feature-grid .card:last-child .card-image{
+        max-width:none;
+      }
     }
   </style>
 </head>
@@ -520,12 +614,12 @@
           </p>
 
           <p class="hero-sub">
-            Die Zusammenarbeit erfolgt in drei klar getrennten Phasen – aktuell kostenfrei und unverbindlich. Eine spätere Umsetzung erfolgt nur, wenn sie fachlich sinnvoll ist und Sie sie beauftragen.
+            Die Zusammenarbeit erfolgt in drei klar getrennten Phasen. Die erste Phase ist aktuell kostenfrei und unverbindlich. Die weiteren Phasen sind nur dann relevant, wenn sie fachlich sinnvoll sind und von Ihnen beauftragt werden.
           </p>
 
           <div class="hero-meta" aria-label="Kernaussagen">
-            <span class="hero-pill">kostenfrei</span>
-            <span class="hero-pill">unverbindlich</span>
+            <span class="hero-pill">Phase 1 kostenfrei</span>
+            <span class="hero-pill">weitere Phasen nach Bedarf</span>
             <span class="hero-pill">datenschutzorientiert</span>
             <span class="hero-pill">schrittweise</span>
           </div>
@@ -555,36 +649,68 @@
     <div class="feature-grid">
 
       <article class="card">
+        <span class="free-badge">kostenlos</span>
         <span class="card-note">Phase 1</span>
-        <h2>Analyse & Strukturierung</h2>
-        <p>Erfassung Ihrer Prozesse, Identifikation von Wiederholungen, Engpässen und Automatisierungspotenzialen – ohne Eingriff in Ihre Systeme.</p>
+        <div class="card-content">
+          <h2>Analyse & Strukturierung</h2>
+          <p>Erfassung Ihrer Prozesse, Identifikation von Wiederholungen, Engpässen und Automatisierungspotenzialen.</p>
+          <ul class="card-list">
+            <li>ohne Einsicht in Ihre Systeme</li>
+            <li>im Rahmen von 2–3 Interviews mit operativen Mitarbeitern</li>
+            <li>Einschätzung der wichtigsten Hebel</li>
+            <li>komplette Auswertung als pdf</li>
+          </ul>
+        </div>
         <div class="card-image">
           <img src="images/megan_rexazin_conde-graph-5000784_1920.png" alt="Prozessanalyse" loading="lazy">
         </div>
       </article>
 
       <article class="card">
+        <span class="paid-badge">kostenpflichtig</span>
         <span class="card-note alt">Phase 2</span>
-        <h2>Technische Validierung</h2>
-        <p>Prüfung der Umsetzbarkeit auf Basis Ihrer Systemlandschaft und Entwicklung konkreter Lösungsansätze.</p>
+        <div class="card-content">
+          <h2>Technische Validierung</h2>
+          <p>Auf Basis der Analyse wird geprüft, wie sich die identifizierten Potenziale technisch umsetzen lassen und welche Voraussetzungen dafür notwendig sind.</p>
+          <ul class="card-list">
+            <li>Analyse bestehender Systeme und Tools</li>
+            <li>Arbeit mit strukturellen oder anonymisierten Daten</li>
+            <li>Definition konkreter Automatisierungslogiken</li>
+            <li>Bewertung von Machbarkeit und Komplexität</li>
+          </ul>
+          <p>Ergebnis ist eine belastbare Entscheidungsgrundlage mit klaren technischen Ansätzen und realistischen Aufwandsschätzungen.</p>
+        </div>
         <div class="card-image">
           <img src="images/megan_rexazin_conde-online-6063329_1920.png" alt="Bewertung" loading="lazy">
         </div>
       </article>
 
       <article class="card">
+        <span class="paid-badge">kostenpflichtig</span>
         <span class="card-note">Phase 3</span>
-        <h2>Prototyping</h2>
-        <p>Ausgewählte Ansätze werden konkretisiert und getestet, um eine fundierte Entscheidungsbasis zu schaffen.</p>
+        <div class="card-content">
+          <h2>Prototyping & Bewertung</h2>
+          <p>In der dritten Phase werden ausgewählte Ansätze konkretisiert und in einer kontrollierten Umgebung getestet.</p>
+          <ul class="card-list">
+            <li>Erstellung von Prototypen oder Testautomationen</li>
+            <li>Simulation realer Abläufe</li>
+            <li>Überprüfung von Stabilität und Nutzen</li>
+            <li>Feinjustierung der Prozesse</li>
+          </ul>
+          <p>Ergebnis ist eine klare Entscheidungsbasis, ob und welche Automationen sinnvoll umgesetzt werden sollten.</p>
+        </div>
         <div class="card-image">
           <img src="images/megan_rexazin_conde-book-5000692_1920.png" alt="Automationsplan" loading="lazy">
         </div>
       </article>
 
       <article class="card">
+        <span class="paid-badge">kostenpflichtig</span>
         <span class="card-note alt">Optional</span>
-        <h2>Umsetzung</h2>
-        <p>Erst nach Abschluss der Analysephasen und nur auf Wunsch erfolgt die technische Umsetzung der priorisierten Automationen.</p>
+        <div class="card-content">
+          <h2>Umsetzung</h2>
+          <p>Erst nach Abschluss der Analysephasen und nur auf Wunsch erfolgt die technische Umsetzung der priorisierten Automationen.</p>
+        </div>
         <div class="card-image">
           <img src="images/megan_rexazin_conde-accounting-6063321_1920.png" alt="Umsetzung" loading="lazy">
         </div>
@@ -617,10 +743,10 @@
       </div>
 
       <div class="process-note">
-        <strong>Hinweis:</strong> Alle drei Phasen sind aktuell kostenfrei und freiwillig. Erst wenn Sie anschließend eine Umsetzung beauftragen möchten, entstehen dafür Kosten.
+        <strong>Hinweis:</strong> Phase 1 ist aktuell kostenfrei und freiwillig. Phase 2 und Phase 3 sind kostenpflichtig, sobald sie beauftragt werden. Eine Umsetzung erfolgt separat und nur auf Wunsch.
       </div>
     </div>
-  </section>  
+  </section>
 
   <section class="security">
     <div class="security-wrap">

@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unser Vorgehen – GM Automatisierung</title>
+  <meta name="theme-color" content="#326b60">
+  <meta name="description" content="Unser Vorgehen in drei klar getrennten Phasen: Analyse, technische Validierung und Prototyping. Ergänzend: unsere Lösungsstufen.">
 
   <style>
     :root{
@@ -11,11 +13,15 @@
       --color-primary-dark:#264f47;
       --color-accent:#cc632f;
       --color-dark:#25312f;
+      --color-dark2:#33403d;
       --color-bg:#f5ead0;
       --color-surface:#ffffff;
       --color-text:#2e2e2e;
-      --color-muted:rgba(46,46,46,.75);
-      --shadow:0 12px 30px rgba(0,0,0,.10);
+      --color-muted:rgba(46,46,46,.76);
+      --color-soft:rgba(50,107,96,.10);
+      --color-soft-2:rgba(204,99,47,.10);
+      --shadow:0 10px 25px rgba(0,0,0,.08);
+      --shadow-strong:0 16px 35px rgba(0,0,0,.14);
       --max-width:900px;
     }
 
@@ -25,11 +31,22 @@
       padding:0;
     }
 
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       background:var(--color-bg);
       color:var(--color-text);
       line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
     }
 
     section{
@@ -38,11 +55,45 @@
       padding:72px 20px;
     }
 
-    h1{
-      font-size:2.4rem;
-      margin-bottom:14px;
-      letter-spacing:-.02em;
+    .section-head{
+      margin-bottom:26px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.6);
+      color:var(--color-primary);
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.02em;
+      margin-bottom:12px;
+    }
+
+    .section-title{
+      font-size:clamp(1.6rem, 2.5vw, 2.2rem);
+      line-height:1.15;
+      margin-bottom:10px;
       color:var(--color-dark);
+      letter-spacing:-.02em;
+    }
+
+    .section-lead{
+      max-width:760px;
+      color:var(--color-muted);
+      font-size:16px;
+      margin-top:8px;
+    }
+
+    h1{
+      font-size:clamp(2rem, 4vw, 3rem);
+      margin-bottom:14px;
+      letter-spacing:-.03em;
+      color:var(--color-dark);
+      line-height:1.08;
     }
 
     h2{
@@ -59,7 +110,7 @@
 
     .lead{
       font-size:17px;
-      max-width:700px;
+      max-width:760px;
     }
 
     .phase{
@@ -69,6 +120,7 @@
       margin-top:28px;
       box-shadow:var(--shadow);
       border:1px solid rgba(50,107,96,.08);
+      position:relative;
     }
 
     .phase-header{
@@ -76,6 +128,8 @@
       align-items:center;
       gap:12px;
       margin-bottom:10px;
+      flex-wrap:wrap;
+      padding-right:110px;
     }
 
     .phase-number{
@@ -88,17 +142,52 @@
       display:flex;
       align-items:center;
       justify-content:center;
+      flex-shrink:0;
     }
 
-    .tag{
-      display:inline-block;
+    .phase h2{
+      margin-bottom:0;
+    }
+
+    .tag,
+    .free-badge,
+    .paid-badge{
+      display:inline-flex;
+      align-items:center;
+      width:fit-content;
       padding:6px 10px;
       border-radius:999px;
-      background:rgba(50,107,96,.1);
-      color:var(--color-primary);
       font-size:12px;
       font-weight:700;
       margin-bottom:10px;
+    }
+
+    .tag{
+      background:rgba(50,107,96,.10);
+      color:var(--color-primary);
+    }
+
+    .tag.alt{
+      background:rgba(204,99,47,.10);
+      color:var(--color-accent);
+    }
+
+    .free-badge,
+    .paid-badge{
+      position:absolute;
+      top:18px;
+      right:18px;
+      color:white;
+      box-shadow:0 6px 14px rgba(0,0,0,.15);
+      z-index:2;
+    }
+
+    .free-badge{
+      background:var(--color-accent);
+    }
+
+    .paid-badge{
+      background:#444;
     }
 
     ul{
@@ -110,12 +199,39 @@
       color:var(--color-muted);
     }
 
+    .example{
+      margin-top:18px;
+      padding:16px 18px;
+      border-left:4px solid var(--color-primary);
+      background:rgba(50,107,96,.06);
+      border-radius:12px;
+      color:var(--color-muted);
+    }
+
+    .example strong{
+      color:var(--color-dark);
+    }
+
+    .pdf-mark{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:4px 9px;
+      border-radius:999px;
+      background:rgba(50,107,96,.10);
+      color:var(--color-primary);
+      font-size:12px;
+      font-weight:700;
+      white-space:nowrap;
+    }
+
     .note{
       margin-top:30px;
       padding:18px;
       border-radius:14px;
       background:rgba(50,107,96,.08);
       font-size:14px;
+      color:var(--color-muted);
     }
 
     .cta{
@@ -130,30 +246,126 @@
       color:white;
       font-weight:700;
       text-decoration:none;
-      display:inline-block;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
       box-shadow:0 10px 20px rgba(50,107,96,.18);
+      transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
     }
 
     .btn:hover{
       background:var(--color-primary-dark);
+      transform:translateY(-2px);
+      box-shadow:0 12px 24px rgba(50,107,96,.22);
     }
 
+    .small{
+      font-size:13px;
+      color:var(--color-muted);
+      margin-top:8px;
+    }
+
+    .divider{
+      height:1px;
+      background:rgba(37,49,47,.10);
+      margin:18px 0;
+    }
+
+    .stufen{
+      background:linear-gradient(180deg, var(--color-dark), var(--color-dark2));
+      color:white;
+      border-radius:24px;
+      padding:34px 28px;
+      box-shadow:var(--shadow-strong);
+      margin-top:34px;
+    }
+
+    .stufen .badge{
+      background:rgba(255,255,255,.08);
+      color:#fff;
+    }
+
+    .stufen .section-title,
+    .stufen .section-lead,
+    .stufen p,
+    .stufen li{
+      color:rgba(255,255,255,.92);
+    }
+
+    .stufen .section-title{
+      margin-bottom:10px;
+    }
+
+    .stufen .section-lead{
+      max-width:760px;
+    }
+
+    .stufen-box{
+      margin-top:18px;
+      padding:18px;
+      border-radius:16px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.08);
+    }
+
+    .stufen-actions{
+      margin-top:18px;
+    }
+
+    .stufen-actions .btn{
+      background:white;
+      color:var(--color-dark);
+      box-shadow:none;
+    }
+
+    .stufen-actions .btn:hover{
+      background:rgba(255,255,255,.88);
+      color:var(--color-dark);
+    }
+
+    @media (max-width: 640px){
+      section{
+        padding:56px 18px;
+      }
+
+      .phase{
+        padding:22px 18px;
+      }
+
+      .phase-header{
+        padding-right:0;
+      }
+
+      .free-badge,
+      .paid-badge{
+        position:static;
+        margin-bottom:12px;
+      }
+
+      .stufen{
+        padding:28px 18px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
 <section>
-
-  <h1>Unser Vorgehen</h1>
-  <p class="lead">
-    Die Identifikation und Umsetzung von Automatisierungspotenzialen erfolgt strukturiert in drei klar getrennten Phasen. Jede Phase ist optional und dient dazu, Risiken zu minimieren und fundierte Entscheidungen zu ermöglichen.
-  </p>
+  <div class="section-head">
+    <span class="badge">Unser Vorgehen</span>
+    <h1>Analyse, Validierung und Prototyping in drei Phasen</h1>
+    <p class="lead">
+      Die Identifikation und Umsetzung von Automatisierungspotenzialen erfolgt strukturiert in drei klar getrennten Phasen.
+      Jede Phase ist optional und dient dazu, Risiken zu minimieren und fundierte Entscheidungen zu ermöglichen.
+    </p>
+  </div>
 
   <div class="phase">
+    <span class="free-badge">kostenlos</span>
     <div class="phase-header">
       <div class="phase-number">1</div>
-      <h2>Analyse & Strukturierung</h2>
+      <h2>Analyse &amp; Strukturierung</h2>
     </div>
 
     <span class="tag">ohne Systemzugriff</span>
@@ -171,16 +383,18 @@
 
     <p>
       Ergebnis ist eine priorisierte Übersicht möglicher Automatisierungen sowie eine erste Einschätzung von Nutzen und Aufwand.
+      Am Ende erhalten Sie eine kompakte <span class="pdf-mark">📄 PDF-Auswertung</span>.
     </p>
   </div>
 
   <div class="phase">
+    <span class="paid-badge">kostenpflichtig</span>
     <div class="phase-header">
       <div class="phase-number">2</div>
       <h2>Technische Validierung</h2>
     </div>
 
-    <span class="tag">kontrollierter Zugriff</span>
+    <span class="tag alt">kontrollierter Zugriff</span>
 
     <p>
       Auf Basis der Analyse wird geprüft, wie sich die identifizierten Potenziale technisch umsetzen lassen und welche Voraussetzungen dafür notwendig sind.
@@ -199,9 +413,10 @@
   </div>
 
   <div class="phase">
+    <span class="paid-badge">kostenpflichtig</span>
     <div class="phase-header">
       <div class="phase-number">3</div>
-      <h2>Prototyping & Bewertung</h2>
+      <h2>Prototyping &amp; Bewertung</h2>
     </div>
 
     <span class="tag">sichere Testumgebung</span>
@@ -222,17 +437,36 @@
     </p>
   </div>
 
+  <div class="stufen">
+    <div class="section-head">
+      <span class="badge">Lösungsstufen</span>
+      <h2 class="section-title">Wie wir Automatisierung technisch einordnen</h2>
+      <p class="section-lead">
+        Nicht jeder Prozess braucht dieselbe Tiefe. Deshalb unterscheiden wir bewusst zwischen Vereinfachung, Standard-Workflow-Automation und kleinen lokalen Speziallösungen.
+      </p>
+    </div>
+
+    <div class="stufen-box">
+      <p>
+        Ziel ist immer die kleinste sinnvolle Lösung, die Zeit spart, Fehler reduziert und stabil bleibt.
+      </p>
+    </div>
+
+    <div class="stufen-actions">
+      <a href="stufen.html" class="btn">Zu den Lösungsstufen</a>
+    </div>
+  </div>
+
   <div class="note">
-    Alle drei Phasen sind aktuell kostenfrei und unverbindlich. Eine Umsetzung erfolgt ausschließlich, wenn sie fachlich sinnvoll ist und von Ihnen ausdrücklich gewünscht wird.
+    Eine Umsetzung erfolgt ausschließlich, wenn sie fachlich sinnvoll ist und von Ihnen ausdrücklich gewünscht wird.
   </div>
 
   <div class="cta">
     <a href="mailto:automation-gm@proton.me?subject=Anfrage%20Automatisierungsanalyse" class="btn">
-      Unverbindliche Analyse anfragen
-    </a>
-  </div>
+      Unverbindliche Analyse anfragen    
+      
+  
 
-</section>
 
 </body>
 </html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lösungsstufen – GM Automatisierung</title>
+
+  <style>
+    :root{
+      --color-primary:#326b60;
+      --color-primary-dark:#264f47;
+      --color-accent:#cc632f;
+      --color-dark:#25312f;
+      --color-bg:#f5ead0;
+      --color-surface:#ffffff;
+      --color-text:#2e2e2e;
+      --color-muted:rgba(46,46,46,.75);
+      --shadow:0 12px 30px rgba(0,0,0,.10);
+      --max-width:900px;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:var(--color-bg);
+      color:var(--color-text);
+      line-height:1.6;
+    }
+
+    section{
+      max-width:var(--max-width);
+      margin:auto;
+      padding:72px 20px;
+    }
+
+    h1{
+      font-size:2.4rem;
+      margin-bottom:14px;
+      letter-spacing:-.02em;
+      color:var(--color-dark);
+    }
+
+    h2{
+      font-size:1.35rem;
+      margin-bottom:10px;
+      color:var(--color-dark);
+      letter-spacing:-.01em;
+    }
+
+    h3{
+      font-size:1rem;
+      margin:18px 0 8px;
+      color:var(--color-dark);
+    }
+
+    p{
+      margin-bottom:14px;
+      color:var(--color-muted);
+    }
+
+    .lead{
+      font-size:17px;
+      max-width:760px;
+    }
+
+    .intro-box{
+      margin-top:22px;
+      padding:18px 20px;
+      border-radius:16px;
+      background:rgba(50,107,96,.08);
+      border:1px solid rgba(50,107,96,.10);
+    }
+
+    .phase{
+      background:var(--color-surface);
+      border-radius:18px;
+      padding:26px;
+      margin-top:28px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(50,107,96,.08);
+    }
+
+    .phase-header{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:10px;
+      flex-wrap:wrap;
+    }
+
+    .phase-number{
+      width:38px;
+      height:38px;
+      border-radius:999px;
+      background:var(--color-accent);
+      color:white;
+      font-weight:700;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-shrink:0;
+    }
+
+    .tag{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(50,107,96,.1);
+      color:var(--color-primary);
+      font-size:12px;
+      font-weight:700;
+      margin-bottom:10px;
+    }
+
+    .tag.alt{
+      background:rgba(204,99,47,.10);
+      color:var(--color-accent);
+    }
+
+    ul{
+      margin:10px 0 16px 18px;
+    }
+
+    li{
+      margin-bottom:6px;
+      color:var(--color-muted);
+    }
+
+    .example{
+      margin-top:18px;
+      padding:16px 18px;
+      border-left:4px solid var(--color-primary);
+      background:rgba(50,107,96,.06);
+      border-radius:12px;
+    }
+
+    .example strong{
+      color:var(--color-dark);
+    }
+
+    .note{
+      margin-top:30px;
+      padding:18px;
+      border-radius:14px;
+      background:rgba(50,107,96,.08);
+      font-size:14px;
+      color:var(--color-muted);
+    }
+
+    .cta{
+      margin-top:40px;
+      text-align:center;
+    }
+
+    .btn{
+      padding:14px 22px;
+      border-radius:10px;
+      background:var(--color-primary);
+      color:white;
+      font-weight:700;
+      text-decoration:none;
+      display:inline-block;
+      box-shadow:0 10px 20px rgba(50,107,96,.18);
+    }
+
+    .btn:hover{
+      background:var(--color-primary-dark);
+    }
+
+    .small{
+      font-size:13px;
+      color:var(--color-muted);
+      margin-top:8px;
+    }
+
+    .divider{
+      height:1px;
+      background:rgba(37,49,47,.10);
+      margin:18px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<section>
+
+  <h1>Unsere Lösungsstufen</h1>
+  <p class="lead">
+    Nicht jeder Prozess braucht dieselbe Tiefe. Deshalb werden Automatisierungsvorschläge bewusst in drei Stufen gedacht:
+    von einfachen Verbesserungen über Workflow-Automation bis hin zu kleinen lokalen Speziallösungen mit begrenztem Custom-Code.
+  </p>
+
+  <div class="intro-box">
+    <p>
+      Ziel ist nicht, unnötig komplexe Systeme zu bauen. Ziel ist die kleinste sinnvolle Lösung, die spürbar Zeit spart,
+      Fehler reduziert und den Prozess stabiler macht.
+    </p>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-number">1</div>
+      <h2>Strukturieren und vereinfachen</h2>
+    </div>
+
+    <span class="tag">ohne neue Systeme</span>
+
+    <p>
+      Diese Stufe eignet sich für Prozesse, bei denen schon mit klaren Regeln, Standards und etwas Ordnung viel gewonnen werden kann.
+      Hier geht es darum, manuelle Reibung zu reduzieren, ohne große technische Eingriffe vorzunehmen.
+    </p>
+
+    <ul>
+      <li>zentrale E-Mail-Postfächer statt verteilter Eingänge</li>
+      <li>feste Vorlagen und Checklisten für wiederkehrende Aufgaben</li>
+      <li>klare Benennungen, Ablagestrukturen und Pflichtfelder</li>
+      <li>Erfassung in Excel, Google Sheets oder Airtable</li>
+      <li>einfache Weiterleitung an die richtigen Personen</li>
+    </ul>
+
+    <div class="example">
+      <strong>Order-Automation-Beispiel:</strong>
+      Bestellungen kommen per E-Mail rein. Statt alles direkt zu automatisieren, wird zuerst der Eingang geordnet:
+      ein zentrales Postfach, feste Betreffregeln, eine Checkliste für Pflichtangaben und eine Tabelle zur Erfassung.
+      Fehlende Angaben werden sichtbar, Standardbestellungen sind leichter prüfbar und das Team arbeitet nicht mehr im Chaos.
+    </div>
+
+    <h3>Was diese Stufe bringt</h3>
+    <ul>
+      <li>schnelle Entlastung ohne IT-Projekt</li>
+      <li>weniger Sucharbeit und weniger Rückfragen</li>
+      <li>sauberere Abläufe als Grundlage für spätere Automatisierung</li>
+      <li>geringes Risiko und sofort verständlicher Nutzen</li>
+    </ul>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-number">2</div>
+      <h2>Workflow-Automation mit Standardtools</h2>
+    </div>
+
+    <span class="tag alt">n8n, Make, Zapier, Power Automate</span>
+
+    <p>
+      Hier werden bestehende Systeme miteinander verbunden, damit Standardfälle weitgehend automatisch laufen.
+      Diese Stufe ist oft der beste Mittelweg zwischen Aufwand, Geschwindigkeit und Wirkung.
+    </p>
+
+    <ul>
+      <li>automatisches Erkennen von E-Mails, Formularen oder Dateien</li>
+      <li>Extraktion von Daten aus PDFs, E-Mails oder CSVs</li>
+      <li>Prüfung von Pflichtfeldern und einfachen Regeln</li>
+      <li>Übergabe an ERP, CRM, Ticketsystem oder Versandprozess über Schnittstellen</li>
+      <li>manuelle Freigabe nur bei Sonderfällen</li>
+    </ul>
+
+    <div class="example">
+      <strong>Order-Automation-Beispiel:</strong>
+      Eine Bestellmail oder ein PDF wird automatisch erkannt. Ein Workflow-Tool liest die relevanten Daten aus,
+      prüft die Pflichtangaben und legt den Auftrag im ERP an. Nur unklare Fälle oder fehlerhafte Bestellungen landen
+      in einer Prüfliste für einen Mitarbeiter.
+    </div>
+
+    <h3>Was diese Stufe bringt</h3>
+    <ul>
+      <li>deutlich weniger Handarbeit</li>
+      <li>weniger Copy-Paste und weniger Übertragungsfehler</li>
+      <li>saubere Übergaben zwischen Tools</li>
+      <li>gute Skalierung für wiederkehrende Standardprozesse</li>
+    </ul>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-number">3</div>
+      <h2>Lokale Speziallösung mit begrenztem Custom-Code</h2>
+    </div>
+
+    <span class="tag">kleiner stabiler Code, lokal oder intern betrieben</span>
+
+    <p>
+      Diese Stufe ist für Prozesse gedacht, bei denen Standardtools nicht mehr sauber genug arbeiten,
+      aber trotzdem keine große Individualsoftware gebaut werden soll. Hier wird gezielt Code eingesetzt,
+      um einen klar abgegrenzten Kernprozess stabil abzubilden.
+    </p>
+
+    <ul>
+      <li>kleine Python-Skripte oder lokale Services</li>
+      <li>Mail-, Datei- oder CSV-Verarbeitung</li>
+      <li>eigene Parser für konkrete Formate</li>
+      <li>einfache Validierung und Fehlerprotokollierung</li>
+      <li>Export in Importdateien oder Übergabe an bestehende Systeme</li>
+    </ul>
+
+    <div class="example">
+      <strong>Order-Automation-Beispiel:</strong>
+      Bestellungen kommen in immer gleichen oder ähnlichen Formaten an, zum Beispiel als PDF, CSV oder strukturierte E-Mail.
+      Ein kleines lokales Programm liest diese Eingänge aus, extrahiert die relevanten Felder, prüft sie gegen feste Regeln
+      und gibt das Ergebnis in einem sauberen Importformat aus. Das bestehende ERP bleibt unangetastet.
+    </div>
+
+    <h3>Was diese Stufe bringt</h3>
+    <ul>
+      <li>mehr Kontrolle als bei reinen No-Code-Tools</li>
+      <li>stabilere Verarbeitung für wiederkehrende Sonderlogik</li>
+      <li>keine unnötig große Softwareentwicklung</li>
+      <li>gut geeignet für klar abgegrenzte Kernprozesse</li>
+    </ul>
+  </div>
+
+  <div class="note">
+    Diese Einteilung ist bewusst pragmatisch. Erst wird vereinfacht, dann verbunden, dann nur dort leicht spezialisiert,
+    wo Standardlösungen an Grenzen stoßen. So bleibt der Aufwand beherrschbar und die Wartung realistisch.
+    Eine Vollbetreuung komplexer Eigenentwicklungen ist damit nicht gemeint.
+  </div>
+
+  <div class="cta">
+    <a href="mailto:automation-gm@proton.me?subject=Anfrage%20Automatisierung" class="btn">
+      Unverbindliche Anfrage senden
+    </a>
+    <div class="small">
+      Optional verlinkbar als eigene Unterseite von Ihrer Hauptseite.
+    </div>
+  </div>
+
+</section>
+
+</body>
+</html>
