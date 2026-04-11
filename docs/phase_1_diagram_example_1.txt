@@ -1,0 +1,73 @@
+flowchart TD
+
+%% =======================
+%% IST-PROZESS: FRAGMENTED ORDER FLOW
+%% =======================
+
+A([📧 Order arrives via Email]) --> B[📥 Read Email]
+B --> C[/📄 Read Order / PDF/]
+C --> D{✅ Complete?}
+
+D -- No --> E[⚠️ Request missing info]
+E --> F[⏳ Wait for reply]
+F --> B
+
+D -- Yes --> G[⌨️ Enter data into ERP]
+G --> H[🔀 Transfer data to Shipping Tool]
+H --> I[📦 Create shipment]
+I --> J[🔁 Copy tracking back to ERP]
+J --> K[✉️ Send confirmation]
+K --> L([🎯 Order completed])
+
+%% =======================
+%% PROBLEM MARKERS
+%% =======================
+
+C -.->|⚠️ interpretation errors| G
+G -.->|⚠️ manual entry errors| H
+H -.->|🔀 system break| I
+F -.->|⏳ waiting time| B
+J -.->|🔁 duplicate work| K
+
+%% =======================
+%% LEGEND
+%% =======================
+
+subgraph LEGEND[Legend]
+  L1([Start / End])
+  L2[Manual Step]
+  L3{Decision}
+  L4[/Document / File/]
+  L5[⏳ Waiting Step]
+  L6[⚠️ Risk / Error Source]
+  L7[🔀 System Transition]
+  L8[Dashed Arrow = Problem Indicator]
+end
+
+%% =======================
+%% DESIGN SYSTEM (COLORS)
+%% =======================
+
+classDef startEnd fill:#326b60,color:#ffffff,stroke:#264f47,stroke-width:2px;
+classDef manual fill:#ffffff,color:#2e2e2e,stroke:#326b60,stroke-width:2px;
+classDef decision fill:#cc632f,color:#ffffff,stroke:#a94f23,stroke-width:2px;
+classDef file fill:#f5ead0,color:#2e2e2e,stroke:#c7b28d,stroke-width:2px;
+classDef waiting fill:#fff3cd,color:#7a5b00,stroke:#d6b656,stroke-width:2px;
+classDef risk fill:#ffe2df,color:#8a1f11,stroke:#cc632f,stroke-width:2px;
+classDef system fill:#e3f2fd,color:#0b3c5d,stroke:#64b5f6,stroke-width:2px;
+classDef legend fill:#f8f8f8,color:#25312f,stroke:#c9c9c9,stroke-width:1px;
+
+%% =======================
+%% CLASS ASSIGNMENTS
+%% =======================
+
+class A,L startEnd;
+class B,G,H,I,J,K manual;
+class D decision;
+class C file;
+class F waiting;
+class E risk;
+
+class L1,L2,L3,L4,L5,L6,L7,L8 legend;
+
+style LEGEND fill:#ffffff,stroke:#c9c9c9,stroke-width:1px,color:#25312f
