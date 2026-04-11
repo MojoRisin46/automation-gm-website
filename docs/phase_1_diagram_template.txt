@@ -1,0 +1,60 @@
+flowchart TD
+
+%% =======================
+%% IST-PROZESS: ORDER-ABWICKLUNG
+%% =======================
+
+A([📧 Bestellmail kommt rein]) --> B[📥 Mitarbeiter öffnet Mail]
+B --> C[/📄 PDF / Bestellung lesen/]
+C --> D{✅ Ist alles vollständig?}
+
+D -- Nein --> E[⚠️ Rückfrage an Kunde senden]
+E --> F[⏳ Auf Antwort warten]
+F --> B
+
+D -- Ja --> G[⌨️ Daten manuell ins ERP eingeben]
+G --> H[🔀 Daten ins Versandtool kopieren]
+H --> I[✉️ Bestätigungsmail manuell senden]
+I --> J([🎯 Auftrag abgeschlossen])
+
+%% =======================
+%% PROBLEM-MARKIERUNGEN
+%% =======================
+
+C -.->|⚠️ fehleranfällig| G
+G -.->|⚠️ Tippfehler / Copy-Paste| H
+B -.->|🔁 wiederholt sich täglich| C
+H -.->|🔀 Systemwechsel| I
+F -.->|⏳ Wartezeit| B
+
+%% =======================
+%% LEGENDE
+%% =======================
+
+subgraph L[Legende]
+  L1[Rechteck: manueller Schritt]
+  L2([Abgerundeter Knoten: Start / Ende])
+  L3{Raute: Entscheidung}
+  L4[/Schräger Kasten: Dokument / Datei / Import/Export/]
+  L5[. . . gestrichelter Pfeil: Problemhinweis]
+end
+
+%% =======================
+%% FARBEN / STYLES
+%% =======================
+
+classDef startEnd fill:#326b60,color:#ffffff,stroke:#264f47,stroke-width:2px;
+classDef manual fill:#ffffff,color:#2e2e2e,stroke:#326b60,stroke-width:2px;
+classDef decision fill:#cc632f,color:#ffffff,stroke:#a94f23,stroke-width:2px;
+classDef file fill:#f5ead0,color:#2e2e2e,stroke:#c7b28d,stroke-width:2px;
+classDef waiting fill:#fff3cd,color:#7a5b00,stroke:#d6b656,stroke-width:2px;
+classDef legend fill:#f8f8f8,color:#25312f,stroke:#c9c9c9,stroke-width:1px;
+
+class A,J startEnd;
+class B,G,H,I manual;
+class C file;
+class D decision;
+class E,F waiting;
+class L1,L2,L3,L4,L5 legend;
+
+style L fill:#ffffff,stroke:#c9c9c9,stroke-width:1px,color:#25312f
