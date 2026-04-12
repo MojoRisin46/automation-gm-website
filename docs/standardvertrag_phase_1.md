@@ -122,7 +122,7 @@ Der Auftragnehmer behandelt alle ihm im Rahmen von Phase 1 bekannt werdenden ver
 
 Diese Pflicht gilt auch nach Beendigung des Projekts fort.
 
-Der Auftraggeber wird ebenfalls gebeten, vertrauliche Informationen des Auftragnehmers nicht an Dritte weiterzugeben.
+Beide Parteien verpflichten sich, sämtliche vertraulichen Informationen der jeweils anderen Partei vertraulich zu behandeln und ausschließlich für die Durchführung dieses Vertrags zu verwenden.
 
 Optional kann zusätzlich eine separate NDA geschlossen werden.
 
@@ -173,6 +173,8 @@ Der Auftragnehmer behält sich vor, allgemeines Know-how, Methoden, Vorlagen, St
 Sollten einzelne Bestimmungen unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.
 
 Gerichtsstand ist, soweit rechtlich zulässig, der Sitz des Auftragnehmers.
+
+Der Unterzeichner bestätigt, zur rechtsverbindlichen Vertretung des Auftraggebers berechtigt zu sein.
 
 ---
 
