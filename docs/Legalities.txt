@@ -1,0 +1,301 @@
+Du bewegst dich mit deinem Setup in einem Bereich, der rechtlich überschaubar ist – aber es gibt ein paar typische Stolperstellen, die oft unterschätzt werden. Gerade weil du **Prozesse analysierst und potenziell Zugriff auf interne Abläufe bekommst**, entstehen Risiken, die über eine normale Website hinausgehen.
+
+Ich gehe das strukturiert durch: **was relevant ist, wo echte Risiken liegen und was du konkret brauchst**.
+
+---
+
+# 1. Grundlegendes (Website) – hast du größtenteils abgedeckt
+
+Du hast:
+
+* Impressum
+* Datenschutzerklärung
+
+Das ist Pflicht und reicht erstmal für die Website selbst.
+
+**Aber kritisch ist nicht die Website – sondern deine Dienstleistung.**
+
+---
+
+# 2. Größtes Risiko: Haftung für deine Arbeit
+
+Du analysierst Prozesse und gibst Empfehlungen. Daraus entstehen zwei Risiken:
+
+### Problem:
+
+* Kunde setzt etwas um → funktioniert nicht → Schaden
+* Kunde verlässt sich auf deine Einschätzung → falsche Priorisierung
+* Automatisierung erzeugt Fehler → z. B. falsche Daten im ERP
+
+### Ohne Absicherung:
+
+Du haftest potentiell voll.
+
+---
+
+## Lösung: Vertrag + Haftungsbegrenzung
+
+Du brauchst **klare Vertragsbedingungen (AGB oder Einzelvertrag)** mit:
+
+* Haftungsbegrenzung (z. B. auf Vorsatz/grobe Fahrlässigkeit)
+* keine Erfolgsgarantie („Beratungsleistung, keine Gewähr für Ergebnis“)
+* Kunde bleibt verantwortlich für Umsetzung
+* keine Haftung für Dritttools (Make, Zapier etc.)
+
+👉 Ohne das bist du angreifbar, selbst bei kleinen Projekten.
+
+---
+
+# 3. Zweitgrößtes Thema: Vertraulichkeit (NDA)
+
+Du hast es selbst erkannt: extrem relevant.
+
+### Realität:
+
+Du bekommst Einblick in:
+
+* interne Abläufe
+* evtl. Kundendaten
+* wirtschaftliche Kennzahlen
+
+### Risiko:
+
+* Kunde hat Angst → arbeitet nicht mit dir
+* oder schlimmer: rechtliche Probleme bei Datenweitergabe
+
+---
+
+## Lösung: NDA (Geheimhaltungsvereinbarung)
+
+Du solltest IMMER anbieten:
+
+* einseitige NDA (du verpflichtest dich)
+* oder beidseitig (sauberer)
+
+### Inhalt:
+
+* was als vertraulich gilt
+* keine Weitergabe an Dritte
+* Nutzung nur für Projektzweck
+* ggf. Löschung nach Projekt
+
+👉 Ohne NDA wirkst du unprofessionell bei größeren Kunden.
+
+---
+
+# 4. Datenschutz / DSGVO – unterschätzt, aber kritisch
+
+Du schreibst:
+
+> „Arbeit mit strukturellen oder anonymisierten Daten“
+
+Das ist gut – aber gefährlich, wenn es nicht stimmt.
+
+---
+
+## Risiko:
+
+Sobald du **personenbezogene Daten siehst oder verarbeitest**, brauchst du:
+
+### → Auftragsverarbeitungsvertrag (AVV)
+
+nach DSGVO Art. 28
+
+---
+
+## Typische Fälle bei dir:
+
+* E-Mails von Kunden enthalten Namen → DSGVO relevant
+* CRM / ERP Daten → DSGVO
+* Ticketsysteme → DSGVO
+
+---
+
+## Lösung:
+
+* Standard-AVV vorbereiten
+* klar definieren:
+  → du bist **Auftragsverarbeiter**, Kunde ist Verantwortlicher
+
+---
+
+# 5. Scheinselbstständigkeit / Gewerbe / Steuer
+
+Nur kurz, weil oft vergessen:
+
+* Gewerbe anmelden (falls noch nicht)
+* Rechnungen korrekt (USt, ggf. Kleinunternehmerregelung)
+* keine Scheinselbstständigkeit (bei nur 1 Kunde kritisch)
+
+---
+
+# 6. IT- und Sicherheitsrisiken
+
+Du sagst „kontrollierter Zugriff“ – das ist ein juristisches Thema.
+
+## Risiken:
+
+* Datenleck über deinen Zugriff
+* Fehlkonfiguration durch dich
+* Zugriff bleibt bestehen nach Projekt
+
+---
+
+## Absicherung:
+
+### vertraglich:
+
+* Zugriff nur temporär
+* Kunde ist verantwortlich für Rechtevergabe
+* keine dauerhafte Datenspeicherung
+
+### praktisch:
+
+* keine lokalen Kopien sensibler Daten
+* möglichst Testdaten nutzen
+* Logging / Nachvollziehbarkeit
+
+---
+
+# 7. Urheberrecht / Nutzungsrechte
+
+Wenn du:
+
+* Automationen baust
+* Skripte schreibst
+* Workflows erstellst
+
+---
+
+## Frage:
+
+Wem gehört das?
+
+Wenn du nichts regelst:
+→ unklar / Streitpotenzial
+
+---
+
+## Lösung:
+
+Im Vertrag definieren:
+
+* Kunde bekommt Nutzungsrecht
+* du darfst Komponenten wiederverwenden
+* keine vollständige Exklusivität (wichtig für dich!)
+
+---
+
+# 8. Angebot / Kommunikation (rechtlich relevant!)
+
+Deine Website sagt:
+
+> „kostenfrei und unverbindlich“
+
+Das ist gut – aber:
+
+## Risiko:
+
+Wenn nicht sauber formuliert:
+→ Kunde erwartet Leistung ohne Limit
+
+---
+
+## Lösung:
+
+* klar definieren, was „Phase 1“ umfasst
+* z. B.:
+
+  * Anzahl Interviews
+  * Umfang der Analyse
+  * kein Support danach
+
+---
+
+# 9. Was dir aktuell konkret fehlt (Priorität)
+
+Hier die Realität, ohne Beschönigung:
+
+## MUSS (so früh wie möglich):
+
+1. **Vertrag / AGB für Projekte**
+2. **Haftungsbegrenzung**
+3. **NDA Vorlage**
+4. **AVV (DSGVO)**
+
+---
+
+## SOLLTE:
+
+5. Angebots-/Leistungsbeschreibung klar definieren
+6. Regelung zu Nutzungsrechten
+7. einfache Sicherheitsregeln schriftlich
+
+---
+
+## OPTIONAL (später):
+
+8. Berufshaftpflichtversicherung (empfehlenswert!)
+
+---
+
+# 10. Ein realistischer Minimal-Stack für dich
+
+Du brauchst kein juristisches Monster.
+
+Ein pragmatisches Setup:
+
+* 1x **Standardvertrag (2–3 Seiten)**
+* 1x **NDA (1–2 Seiten)**
+* 1x **AVV (Standardtemplate)**
+
+Das reicht für 90% deiner Fälle.
+
+---
+
+# 11. Strategischer Hinweis (wichtig)
+
+Dein Modell ist gut, aber:
+
+Du bewegst dich zwischen:
+
+* Beratung
+* IT-Dienstleistung
+* Prozessoptimierung
+
+→ genau diese Mischform ist rechtlich heikel, weil:
+
+**Kunden interpretieren deine Rolle unterschiedlich.**
+
+Deshalb musst du das klarstellen:
+
+👉 Du bist **Berater + technischer Umsetzer auf Anforderung**,
+nicht Verantwortlicher für deren Prozesse.
+
+---
+
+# Fazit
+
+Die größte Gefahr ist nicht Abmahnung wegen Website, sondern:
+
+* Haftung für falsche Entscheidungen
+* Umgang mit sensiblen Daten
+* unklare Erwartungen des Kunden
+
+Wenn du nur drei Dinge sauber regelst:
+
+* Haftung
+* Datenschutz (AVV)
+* Vertraulichkeit (NDA)
+
+… bist du schon deutlich stabiler aufgestellt als viele andere in deinem Bereich.
+
+---
+
+Wenn du willst, kann ich dir im nächsten Schritt konkret:
+
+* eine **passende NDA für dein Modell**
+* oder einen **einfachen, schlanken Standardvertrag**
+
+auf deine Website und dein Vorgehen zugeschnitten erstellen.
+

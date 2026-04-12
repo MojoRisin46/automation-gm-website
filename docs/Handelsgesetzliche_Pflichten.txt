@@ -1,0 +1,301 @@
+Für ein kleines Gewerbe ist der Aufwand überschaubar, aber die typischen Fehler passieren genau dort, weil man Dinge „locker“ sieht. Entscheidend ist nicht die Größe, sondern dass du **formal sauber arbeitest**. Ich gehe die relevanten Bereiche durch – mit Fokus auf das, was real Probleme macht.
+
+---
+
+# 1. Buchhaltung & Aufbewahrung
+
+## Pflicht:
+
+* **10 Jahre Aufbewahrung** für:
+
+  * Rechnungen (Ein- und Ausgang)
+  * Buchungsbelege
+* **6 Jahre** für:
+
+  * geschäftliche E-Mails
+  * Angebote, Aufträge
+
+## Typische Fehler:
+
+* Rechnungen irgendwo verstreut (Mail + Ordner + Tool)
+* keine klare Struktur
+* fehlende Nachvollziehbarkeit
+
+## Lösung:
+
+* zentrales System (z. B. Ordnerstruktur oder Tool)
+* einfache Logik:
+
+  * `2026 > Eingangsrechnungen`
+  * `2026 > Ausgangsrechnungen`
+* alles als PDF speichern (unveränderbar)
+
+---
+
+# 2. Rechnungen (kritisch!)
+
+## Pflichtangaben:
+
+* vollständiger Name + Anschrift (du + Kunde)
+* Steuernummer oder USt-ID
+* Rechnungsdatum
+* Leistungsdatum
+* fortlaufende Rechnungsnummer
+* genaue Leistungsbeschreibung
+* Betrag + ggf. Umsatzsteuer
+
+## Sonderfall:
+
+Wenn du Kleinunternehmer bist:
+→ Hinweis: „Gemäß §19 UStG wird keine Umsatzsteuer berechnet“
+
+---
+
+## Typische Risiken:
+
+* unklare Leistungsbeschreibung → Streit
+* keine Nummernlogik → Chaos bei Prüfung
+* falsche Steuerangaben → teuer
+
+---
+
+# 3. Steuern
+
+## Du musst im Blick behalten:
+
+### Einkommensteuer
+
+→ auf Gewinn (Einnahmen – Ausgaben)
+
+### Umsatzsteuer
+
+→ nur wenn du **nicht Kleinunternehmer** bist
+
+### Gewerbesteuer
+
+→ meist irrelevant bei kleinen Gewinnen (Freibetrag)
+
+---
+
+## Kritisch:
+
+* Rücklagen bilden (!)
+
+Viele machen den Fehler:
+→ Geld kommt rein → alles „verfügbar“
+
+Realität:
+→ ein Teil gehört dem Finanzamt
+
+---
+
+## Empfehlung:
+
+* 25–35 % zurücklegen (konservativ)
+
+---
+
+# 4. Bank & Trennung
+
+## Pflicht ist es nicht – aber praktisch notwendig:
+
+* separates Geschäftskonto
+
+## Warum:
+
+* saubere Trennung privat / geschäftlich
+* einfachere Buchhaltung
+* weniger Stress bei Steuerprüfung
+
+---
+
+# 5. Angebote & Verträge
+
+Das ist Geschäftsführung, nicht nur Recht.
+
+## Du brauchst:
+
+* klare Angebote (schriftlich!)
+* definierter Leistungsumfang
+* kein „ich schau mal drauf“
+
+---
+
+## Typische Fehler:
+
+* mündliche Absprachen
+* Scope wächst → kein Geld dafür
+* Kunde erwartet mehr als gedacht
+
+---
+
+## Lösung:
+
+Immer festhalten:
+
+* was genau enthalten ist
+* was nicht enthalten ist
+* wie Erweiterungen laufen
+
+---
+
+# 6. Dokumentation deiner Arbeit
+
+Wird oft ignoriert.
+
+## Warum wichtig:
+
+* Nachvollziehbarkeit bei Problemen
+* Schutz bei Streit
+* eigener Überblick
+
+---
+
+## Minimal sinnvoll:
+
+* kurze Notizen pro Projekt:
+
+  * was wurde analysiert
+  * was wurde empfohlen
+  * was wurde umgesetzt
+
+---
+
+# 7. Zeit- und Selbstmanagement (unterschätzt)
+
+Gerade im Nebengewerbe kritisch.
+
+## Risiko:
+
+* du unterschätzt Aufwand
+* arbeitest faktisch unter Mindestlohn
+* verzettelst dich
+
+---
+
+## Lösung:
+
+* grob Zeit tracken
+* intern auswerten:
+  → lohnt sich das überhaupt?
+
+---
+
+# 8. Versicherungen (realistisch betrachtet)
+
+Für dich relevant:
+
+## Berufshaftpflicht (wichtig)
+
+Deckt:
+
+* Vermögensschäden durch Fehler
+* Beratungsfehler
+
+---
+
+## Nicht nötig am Anfang:
+
+* große Business-Pakete
+* übertriebene Absicherung
+
+---
+
+# 9. Kommunikation & Außenwirkung
+
+Geschäftsführung heißt auch:
+
+* klare E-Mails
+* keine schwammigen Aussagen
+* keine Versprechen, die du nicht halten kannst
+
+---
+
+## Kritisch:
+
+Viele Probleme entstehen durch:
+→ falsche Erwartung beim Kunden
+
+---
+
+# 10. Skalierungsfalle (vorausschauend)
+
+Auch wenn du klein bist:
+
+## Problem:
+
+Wenn es läuft:
+
+* mehr Kunden
+* mehr Komplexität
+* mehr Risiko
+
+---
+
+## Deshalb jetzt schon:
+
+* einfache Struktur aufbauen
+* nicht improvisieren
+
+---
+
+# 11. Minimal-Setup für dich (realistisch)
+
+Wenn du es sauber, aber schlank willst:
+
+## Muss:
+
+* saubere Rechnungen
+* Belege strukturiert speichern
+* Steuer-Rücklagen
+* einfache Angebote
+* NDA + Vertrag (aus vorher)
+
+---
+
+## Sollte:
+
+* Geschäftskonto
+* einfache Doku je Projekt
+* grundlegendes Zeitgefühl für Aufwand
+
+---
+
+## Optional:
+
+* Buchhaltungstool
+* Steuerberater (wenn es wächst)
+
+---
+
+# 12. Was oft komplett vergessen wird
+
+Ein paar Dinge, die später Probleme machen:
+
+* **kein Backup von Dokumenten**
+* **Rechnungen nicht revisionssicher gespeichert**
+* **keine klare Nummernlogik**
+* **private und geschäftliche Ausgaben vermischt**
+* **keine Übersicht über offene Rechnungen**
+
+---
+
+# Fazit
+
+Dein größtes Risiko liegt nicht in komplizierten Gesetzen, sondern in:
+
+* fehlender Struktur
+* unklaren Vereinbarungen
+* schlechter Nachvollziehbarkeit
+
+Wenn du das sauber hältst, bist du für ein kleines Gewerbe solide aufgestellt.
+
+---
+
+Wenn du willst, kann ich dir im nächsten Schritt konkret:
+
+* eine **extrem einfache Rechnungs-Vorlage**
+* oder eine **minimalistische Buchhaltungsstruktur (Ordner + System)**
+
+bauen, die exakt zu deinem Setup passt.
+
