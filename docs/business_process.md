@@ -24,7 +24,7 @@ No sensitive data required.
 
 This already builds trust.
 
-### Phase 1 - Detailsz
+### Phase 1 - Details
 
 
 What Phase 1 actually reveals (if done properly)

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phase 3 Erweiterung – GM Automatisierung</title>
+
+<style>
+:root{
+  --color-primary:#326b60;
+  --color-primary-dark:#264f47;
+  --color-accent:#cc632f;
+  --color-dark:#25312f;
+  --color-bg:#f5ead0;
+  --color-surface:#ffffff;
+  --color-text:#2e2e2e;
+  --color-muted:rgba(46,46,46,.75);
+  --shadow:0 12px 30px rgba(0,0,0,.10);
+  --max-width:900px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  background:var(--color-bg);
+  color:var(--color-text);
+  line-height:1.6;
+}
+
+section{
+  max-width:var(--max-width);
+  margin:auto;
+  padding:72px 20px;
+}
+
+h1{
+  font-size:2.2rem;
+  color:var(--color-dark);
+  margin-bottom:10px;
+}
+
+p.lead{
+  color:var(--color-muted);
+  max-width:750px;
+  margin-bottom:40px;
+}
+
+.phase{
+  background:var(--color-surface);
+  border-radius:18px;
+  padding:26px;
+  margin-bottom:22px;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(50,107,96,.08);
+}
+
+.phase-header{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:10px;
+}
+
+.phase-number{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:var(--color-accent);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+}
+
+.tag{
+  display:inline-block;
+  font-size:12px;
+  font-weight:700;
+  padding:5px 10px;
+  border-radius:999px;
+  background:rgba(50,107,96,.1);
+  color:var(--color-primary);
+  margin-bottom:10px;
+}
+
+h2{
+  font-size:1.3rem;
+  color:var(--color-dark);
+}
+
+ul{
+  margin-left:18px;
+  margin-top:10px;
+}
+
+li{
+  margin-bottom:6px;
+  color:var(--color-muted);
+}
+
+/* Sublevel styling */
+.sublevel{
+  margin-top:15px;
+  padding:14px;
+  border-radius:12px;
+  border-left:4px solid var(--color-primary);
+  background:#fafafa;
+}
+
+.sublevel h3{
+  font-size:1rem;
+  margin-bottom:6px;
+  color:var(--color-dark);
+}
+
+.sublevel p{
+  font-size:14px;
+  color:var(--color-muted);
+  margin-bottom:8px;
+}
+
+.badge{
+  display:inline-block;
+  font-size:11px;
+  padding:3px 8px;
+  border-radius:999px;
+  background:rgba(204,99,47,.12);
+  color:var(--color-accent);
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.small-note{
+  margin-top:18px;
+  padding:14px 16px;
+  border-radius:12px;
+  background:rgba(50,107,96,.07);
+  color:var(--color-muted);
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<section>
+
+<h1>Phase 3 – Lokale Speziallösung mit begrenztem Custom-Code</h1>
+
+<p class="lead">
+Diese Phase bleibt bewusst klein und kontrolliert. Sie kommt dann zum Einsatz, wenn Standardtools nicht mehr sauber genug arbeiten, aber trotzdem keine große Individualsoftware gebaut werden soll. Der Fokus liegt auf lokalen oder intern betriebenen Lösungen mit klar abgegrenztem Kernprozess.
+</p>
+
+<!-- 3A -->
+<div class="phase">
+  <div class="phase-header">
+    <div class="phase-number">3A</div>
+    <h2>Lokale Integrationshilfe</h2>
+  </div>
+  <span class="tag">Systeme verbinden → sauber übergeben</span>
+
+  <ul>
+    <li>kleine Skripte oder interne Jobs zum Verbinden vorhandener Systeme</li>
+    <li>Verarbeitung von CSV-, JSON-, Excel- oder API-Daten</li>
+    <li>Übernahme von Exporten aus CRM, ERP, Shop oder Mail</li>
+    <li>Umwandlung in ein einheitliches Importformat</li>
+    <li>Protokollierung von Erfolg, Fehlern und Laufzeiten</li>
+  </ul>
+
+  <div class="sublevel">
+    <span class="badge">Ablauf</span>
+    <h3>Ein kleines Programm schließt eine konkrete Systemlücke</h3>
+    <p>Ein Export wird abgeholt, geprüft, umgeformt und an das Zielsystem übergeben. Es entsteht keine neue Plattform, sondern nur eine schlanke Brücke zwischen bestehenden Systemen.</p>
+  </div>
+
+  <div class="small-note">
+    Typisch ist hier ein geplanter lokaler Job, ein kleiner Container oder ein interner Dienst, der regelmäßig Daten von A nach B bringt.
+  </div>
+</div>
+
+<!-- 3B -->
+<div class="phase">
+  <div class="phase-header">
+    <div class="phase-number">3B</div>
+    <h2>Lokale Verarbeitungslogik</h2>
+  </div>
+  <span class="tag">Daten lesen → prüfen → strukturieren</span>
+
+  <ul>
+    <li>Auslesen von PDFs, E-Mails, Scans oder CSVs</li>
+    <li>eigene Parser für feste Formate oder Lieferantenlayouts</li>
+    <li>einfache Validierungsregeln und Plausibilitätsprüfungen</li>
+    <li>Erkennung typischer Pflichtfelder und Abweichungen</li>
+    <li>Erzeugung sauberer Zwischen- oder Importdaten</li>
+  </ul>
+
+  <div class="sublevel">
+    <span class="badge">Ablauf</span>
+    <h3>Ein lokales Programm macht unstrukturierte Eingänge brauchbar</h3>
+    <p>Das Modul liest wiederkehrende Dateien oder Mails aus, erkennt die relevanten Felder, prüft diese gegen feste Regeln und gibt strukturierte Ergebnisse weiter. Sonderfälle landen in einer Klärliste.</p>
+  </div>
+
+  <div class="small-note">
+    Diese Stufe ist sinnvoll, wenn Standardtools bei Sonderformaten zu ungenau oder zu unflexibel sind.
+  </div>
+</div>
+
+<!-- 3C -->
+<div class="phase">
+  <div class="phase-header">
+    <div class="phase-number">3C</div>
+    <h2>Lokales Spezialmodul für einen Kernprozess</h2>
+  </div>
+  <span class="tag">Fachlogik gezielt abbilden</span>
+
+  <ul>
+    <li>kleines internes Tool für einen kritischen Fachprozess</li>
+    <li>Matching von Bestellung, Lieferung und Rechnung</li>
+    <li>Sonderlogik für Freigaben, Abweichungen oder Prüfungen</li>
+    <li>qualifizierte Entscheidung auf Basis klarer Regeln</li>
+    <li>Übergabe an bestehende Systeme ohne großen Umbau</li>
+  </ul>
+
+  <div class="sublevel">
+    <span class="badge">Ablauf</span>
+    <h3>Ein eng begrenzter Prozess wird stabil und nachvollziehbar gelöst</h3>
+    <p>Das Modul führt eine fachliche Prüfung durch, etwa Mengen-, Preis- oder Referenzabgleich. Danach wird ein Ergebnis erzeugt: freigeben, klären oder ablehnen. Das bestehende System bleibt unverändert.</p>
+  </div>
+
+  <div class="small-note">
+    Das ist die tiefste Stufe, bleibt aber bewusst klein: kein großes Produkt, sondern ein präzises Werkzeug für einen klaren Engpass.
+  </div>
+</div>
+
+</section>
+
+</body>
+</html>

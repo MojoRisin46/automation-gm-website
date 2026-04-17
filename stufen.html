@@ -1,189 +1,232 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lösungsstufen – GM Automatisierung</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lösungsstufen – GM Automatisierung</title>
 
-  <style>
-    :root{
-      --color-primary:#326b60;
-      --color-primary-dark:#264f47;
-      --color-accent:#cc632f;
-      --color-dark:#25312f;
-      --color-bg:#f5ead0;
-      --color-surface:#ffffff;
-      --color-text:#2e2e2e;
-      --color-muted:rgba(46,46,46,.75);
-      --shadow:0 12px 30px rgba(0,0,0,.10);
-      --max-width:900px;
-    }
+<style>
+:root{
+  --color-primary:#326b60;
+  --color-primary-dark:#264f47;
+  --color-accent:#cc632f;
+  --color-dark:#25312f;
+  --color-bg:#f5ead0;
+  --color-surface:#ffffff;
+  --color-text:#2e2e2e;
+  --color-muted:rgba(46,46,46,.75);
+  --shadow:0 12px 30px rgba(0,0,0,.10);
+  --max-width:900px;
+}
 
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-    }
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-    body{
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      background:var(--color-bg);
-      color:var(--color-text);
-      line-height:1.6;
-    }
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:var(--color-bg);
+  color:var(--color-text);
+  line-height:1.6;
+}
 
-    section{
-      max-width:var(--max-width);
-      margin:auto;
-      padding:72px 20px;
-    }
+section{
+  max-width:var(--max-width);
+  margin:auto;
+  padding:72px 20px;
+}
 
-    h1{
-      font-size:2.4rem;
-      margin-bottom:14px;
-      letter-spacing:-.02em;
-      color:var(--color-dark);
-    }
+h1{
+  font-size:2.4rem;
+  margin-bottom:14px;
+  letter-spacing:-.02em;
+  color:var(--color-dark);
+}
 
-    h2{
-      font-size:1.35rem;
-      margin-bottom:10px;
-      color:var(--color-dark);
-      letter-spacing:-.01em;
-    }
+h2{
+  font-size:1.35rem;
+  margin-bottom:10px;
+  color:var(--color-dark);
+  letter-spacing:-.01em;
+}
 
-    h3{
-      font-size:1rem;
-      margin:18px 0 8px;
-      color:var(--color-dark);
-    }
+h3{
+  font-size:1rem;
+  margin:18px 0 8px;
+  color:var(--color-dark);
+}
 
-    p{
-      margin-bottom:14px;
-      color:var(--color-muted);
-    }
+p{
+  margin-bottom:14px;
+  color:var(--color-muted);
+}
 
-    .lead{
-      font-size:17px;
-      max-width:760px;
-    }
+.lead{
+  font-size:17px;
+  max-width:760px;
+}
 
-    .intro-box{
-      margin-top:22px;
-      padding:18px 20px;
-      border-radius:16px;
-      background:rgba(50,107,96,.08);
-      border:1px solid rgba(50,107,96,.10);
-    }
+.intro-box{
+  margin-top:22px;
+  padding:18px 20px;
+  border-radius:16px;
+  background:rgba(50,107,96,.08);
+  border:1px solid rgba(50,107,96,.10);
+}
 
-    .phase{
-      background:var(--color-surface);
-      border-radius:18px;
-      padding:26px;
-      margin-top:28px;
-      box-shadow:var(--shadow);
-      border:1px solid rgba(50,107,96,.08);
-    }
+.phase{
+  background:var(--color-surface);
+  border-radius:18px;
+  padding:26px;
+  margin-top:28px;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(50,107,96,.08);
+}
 
-    .phase-header{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      margin-bottom:10px;
-      flex-wrap:wrap;
-    }
+.phase-header{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:10px;
+  flex-wrap:wrap;
+}
 
-    .phase-number{
-      width:38px;
-      height:38px;
-      border-radius:999px;
-      background:var(--color-accent);
-      color:white;
-      font-weight:700;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      flex-shrink:0;
-    }
+.phase-number{
+  width:38px;
+  height:38px;
+  border-radius:999px;
+  background:var(--color-accent);
+  color:#fff;
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
 
-    .tag{
-      display:inline-block;
-      padding:6px 10px;
-      border-radius:999px;
-      background:rgba(50,107,96,.1);
-      color:var(--color-primary);
-      font-size:12px;
-      font-weight:700;
-      margin-bottom:10px;
-    }
+.tag{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(50,107,96,.1);
+  color:var(--color-primary);
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:10px;
+}
 
-    .tag.alt{
-      background:rgba(204,99,47,.10);
-      color:var(--color-accent);
-    }
+.tag.alt{
+  background:rgba(204,99,47,.10);
+  color:var(--color-accent);
+}
 
-    ul{
-      margin:10px 0 16px 18px;
-    }
+ul{
+  margin:10px 0 16px 18px;
+}
 
-    li{
-      margin-bottom:6px;
-      color:var(--color-muted);
-    }
+li{
+  margin-bottom:6px;
+  color:var(--color-muted);
+}
 
-    .example{
-      margin-top:18px;
-      padding:16px 18px;
-      border-left:4px solid var(--color-primary);
-      background:rgba(50,107,96,.06);
-      border-radius:12px;
-    }
+.example{
+  margin-top:18px;
+  padding:16px 18px;
+  border-left:4px solid var(--color-primary);
+  background:rgba(50,107,96,.06);
+  border-radius:12px;
+}
 
-    .example strong{
-      color:var(--color-dark);
-    }
+.example strong{
+  color:var(--color-dark);
+}
 
-    .note{
-      margin-top:30px;
-      padding:18px;
-      border-radius:14px;
-      background:rgba(50,107,96,.08);
-      font-size:14px;
-      color:var(--color-muted);
-    }
+.note{
+  margin-top:30px;
+  padding:18px;
+  border-radius:14px;
+  background:rgba(50,107,96,.08);
+  font-size:14px;
+  color:var(--color-muted);
+}
 
-    .cta{
-      margin-top:40px;
-      text-align:center;
-    }
+.cta{
+  margin-top:40px;
+  text-align:center;
+}
 
-    .btn{
-      padding:14px 22px;
-      border-radius:10px;
-      background:var(--color-primary);
-      color:white;
-      font-weight:700;
-      text-decoration:none;
-      display:inline-block;
-      box-shadow:0 10px 20px rgba(50,107,96,.18);
-    }
+.btn{
+  padding:14px 22px;
+  border-radius:10px;
+  background:var(--color-primary);
+  color:#fff;
+  font-weight:700;
+  text-decoration:none;
+  display:inline-block;
+  box-shadow:0 10px 20px rgba(50,107,96,.18);
+}
 
-    .btn:hover{
-      background:var(--color-primary-dark);
-    }
+.btn:hover{
+  background:var(--color-primary-dark);
+}
 
-    .small{
-      font-size:13px;
-      color:var(--color-muted);
-      margin-top:8px;
-    }
+.small{
+  font-size:13px;
+  color:var(--color-muted);
+  margin-top:8px;
+}
 
-    .divider{
-      height:1px;
-      background:rgba(37,49,47,.10);
-      margin:18px 0;
-    }
-  </style>
+.divider{
+  height:1px;
+  background:rgba(37,49,47,.10);
+  margin:18px 0;
+}
+
+.subtle-link{
+  display:inline-block;
+  margin-top:8px;
+  font-size:14px;
+  color:var(--color-primary-dark);
+  text-decoration:none;
+  font-weight:700;
+}
+
+.subtle-link:hover{
+  color:var(--color-primary);
+}
+
+/* sehr dezenter positiver Hinweis in Stufe 2 */
+.stufe2-hint{
+  float:right;
+  max-width:270px;
+  margin:0 0 12px 16px;
+  padding:12px 14px;
+  border-radius:14px;
+  background:rgba(50,107,96,.08);
+  border:1px solid rgba(50,107,96,.12);
+  box-shadow:0 8px 18px rgba(0,0,0,.05);
+  color:var(--color-muted);
+  font-size:13px;
+  line-height:1.45;
+}
+
+.stufe2-hint strong{
+  display:block;
+  color:var(--color-dark);
+  margin-bottom:3px;
+  font-size:13px;
+}
+
+@media (max-width:720px){
+  .stufe2-hint{
+    float:none;
+    max-width:none;
+    margin:10px 0 14px 0;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -238,9 +281,16 @@
       <li>sauberere Abläufe als Grundlage für spätere Automatisierung</li>
       <li>geringes Risiko und sofort verständlicher Nutzen</li>
     </ul>
+
+    <a href="stufe_1.html" class="subtle-link">Mehr zu Stufe 1A, 1B und 1C →</a>
   </div>
 
   <div class="phase">
+    <div class="stufe2-hint">
+      <strong>✨ Unser Spezialgebiet</strong>
+      Oft steckt das größte Potenzial nicht in neuen Tools, sondern darin, vorhandene Systeme sauber miteinander zu verbinden.
+    </div>
+
     <div class="phase-header">
       <div class="phase-number">2</div>
       <h2>Workflow-Automation mit Standardtools</h2>
@@ -313,6 +363,8 @@
       <li>keine unnötig große Softwareentwicklung</li>
       <li>gut geeignet für klar abgegrenzte Kernprozesse</li>
     </ul>
+
+    <a href="stufe_3.html" class="subtle-link">Mehr zu Stufe 3A, 3B und 3C →</a>
   </div>
 
   <div class="note">
@@ -324,6 +376,8 @@
   <div class="cta">
     <a href="mailto:automation-gm@proton.me?subject=Anfrage%20Automatisierung" class="btn">
       Unverbindliche Anfrage senden
+
+</section>
 
 </body>
 </html>
